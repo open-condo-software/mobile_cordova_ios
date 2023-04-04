@@ -89,6 +89,10 @@
     if (settings == nil) {
         return configuration;
     }
+    
+    if (@available(iOS 14.5, *)) {
+        configuration.preferences.textInteractionEnabled = NO;
+    }
 
     configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:NO];
 
