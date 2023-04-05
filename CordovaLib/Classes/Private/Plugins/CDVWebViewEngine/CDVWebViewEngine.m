@@ -94,7 +94,7 @@
         configuration.preferences.textInteractionEnabled = NO;
     }
 
-    configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:NO];
+    configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:YES];
 
     // Set the media types that are required for user action for playback
     WKAudiovisualMediaTypes mediaType = WKAudiovisualMediaTypeAll; // default
