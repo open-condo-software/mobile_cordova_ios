@@ -162,6 +162,11 @@
         
     }
 
+    [configuration setValue:@YES forKey:@"_allowUniversalAccessFromFileURLs"];
+    if (@available(iOS 14.0, *)) {
+        configuration.defaultWebpagePreferences.allowsContentJavaScript = YES;
+    }
+    
     return configuration;
 }
 
