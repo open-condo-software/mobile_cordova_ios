@@ -304,9 +304,11 @@
         [CDVTimer start:@"TotalPluginStartup"];
 
         for (NSString* pluginName in self.startupPluginNames) {
-            [CDVTimer start:pluginName];
-            [self getCommandInstance:pluginName];
-            [CDVTimer stop:pluginName];
+            if ([self.dynamicPlugins containsObject:pluginName] || self.dynamicPlugins == nil) {
+                [CDVTimer start:pluginName];
+                [self getCommandInstance:pluginName];
+                [CDVTimer stop:pluginName];
+            }
         }
 
         [CDVTimer stop:@"TotalPluginStartup"];

@@ -55,6 +55,8 @@
     CDVCommandQueue* _commandQueue;
 }
 
+@property (nonatomic, strong) NSArray<NSString *> * _Nullable dynamicPlugins;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, weak) IBOutlet UIView* webView;
