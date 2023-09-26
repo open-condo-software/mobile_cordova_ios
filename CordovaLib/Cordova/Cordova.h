@@ -47,3 +47,4 @@ FOUNDATION_EXPORT const unsigned char CordovaVersionString[];
 #import <Cordova/CDVScreenOrientationDelegate.h>
 #import <Cordova/CDVTimer.h>
 #import <Cordova/CDVURLSchemeHandler.h>
+#import <Cordova/CDVWebViewEngine.h>

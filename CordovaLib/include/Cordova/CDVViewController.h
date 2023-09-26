@@ -81,6 +81,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, readwrite, strong) NSArray* supportedOrientations;
 
+- (id _Nullable)engineWith:(nonnull Class)engineClass bounds:(CGRect)bounds;
+
 - (UIView*)newCordovaViewWithFrame:(CGRect)bounds;
 
 - (nullable NSString*)appURLScheme;

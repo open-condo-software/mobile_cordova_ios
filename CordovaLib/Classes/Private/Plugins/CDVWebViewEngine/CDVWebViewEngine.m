@@ -229,6 +229,8 @@
         [configuration setURLSchemeHandler:self.schemeHandler forURLScheme:scheme];
     }
 
+    [self webViewConfigurationAdditionalSetup:configuration];
+    
     // re-create WKWebView, since we need to update configuration
     WKWebView* wkWebView = [[WKWebView alloc] initWithFrame:self.engineWebView.frame configuration:configuration];
     wkWebView.UIDelegate = self.uiDelegate;
@@ -283,6 +285,11 @@
     NSLog(@"Using WKWebView");
 
     [self addURLObserver];
+}
+
+- (void)webViewConfigurationAdditionalSetup:(WKWebViewConfiguration *)webViewConfiguration
+{
+    
 }
 
 - (void)onReset {

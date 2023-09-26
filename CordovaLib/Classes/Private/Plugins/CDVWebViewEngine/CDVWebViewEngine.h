@@ -17,7 +17,7 @@
  under the License.
  */
 
-@import WebKit;
+#import <WebKit/WebKit.h>
 #import <Cordova/CDV.h>
 
 @interface CDVWebViewEngine : CDVPlugin <CDVWebViewEngineProtocol, WKScriptMessageHandler, WKNavigationDelegate>
@@ -25,5 +25,6 @@
 @property (nonatomic, strong, readonly) id <WKUIDelegate> uiDelegate;
 
 - (void)allowsBackForwardNavigationGestures:(CDVInvokedUrlCommand*)command;
+- (void)webViewConfigurationAdditionalSetup:(WKWebViewConfiguration *)webViewConfiguration;
 
 @end
