@@ -162,7 +162,9 @@
         
     }
 
-    [configuration setValue:@YES forKey:@"_allowUniversalAccessFromFileURLs"];
+    //[configuration setValue:@YES forKey:@"_allowUniversalAccessFromFileURLs"]; //Broken in iOS 18
+    [configuration performSelector:@selector(_setAllowUniversalAccessFromFileURLs:) withObject:@YES];
+    
     if (@available(iOS 14.0, *)) {
         configuration.defaultWebpagePreferences.allowsContentJavaScript = YES;
     }
