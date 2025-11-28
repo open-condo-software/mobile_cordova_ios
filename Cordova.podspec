@@ -37,6 +37,7 @@ Pod::Spec.new do |s|
   s.frameworks          = 'Foundation'
   s.source_files        = 'CordovaLib/**/*.{h,m}'
   s.public_header_files = 'CordovaLib/include/**/*.h'
+  s.resource_bundles    = { "Cordova" => ["CordovaLib/PrivacyInfo.xcprivacy"] }
 end
 
 #
